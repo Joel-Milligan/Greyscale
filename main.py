@@ -10,7 +10,9 @@ def main():
         if filename != ".keep":
             old_img = io.imread(f"./Coloured Images/{filename}")
             new_img = color.rgb2gray(old_img)
-            io.imsave(f"./Greyscale Images/{filename.split('.')[0]}_grey.{filename.split('.')[1]}", new_img)
+            io.imsave(f"./Greyscale Images/{filename.split('.')[0]}_grey.png", new_img)
+
+    # {filename.split('.')[1]}
 
 if __name__ == "__main__":
     main()
